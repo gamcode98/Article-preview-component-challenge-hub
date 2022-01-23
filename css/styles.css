@@ -144,9 +144,26 @@ body {
   .share-social-media {
     width: fit-content;
     left: initial;
-    right: -4rem;
-    bottom: 5rem;
-    z-index: 99999;
-    overflow-x: visible;
+    right: 2.5rem;
+    bottom: 6rem;
+    border-radius: 0.4rem;
+    transform: scale(0);
+  }
+  .share-social-media--show {
+    transform: scale(1);
+  }
+  .share-social-media::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: var(--veryDarkGrayishBlue);
+    right: 0;
+    top: 4rem;
+    clip-path: polygon(100% 0, 0 1%, 100% 100%);
+  }
+  .main-personal-btn {
+    cursor: pointer;
   }
 }
